@@ -1,0 +1,26 @@
+---
+repos:
+  - repo: https://github.com/soerenschneider/pre-commit-hooks
+    rev: v1.3.0
+    hooks:
+      - id: go-fmt
+      - id: conventional-commit
+
+      - id: yamllint
+  - repo: local
+    hooks:
+      - id: go-unit-tests
+        name: go unit tests
+        entry: make tests
+        types: [go]
+        language: golang
+        require_serial: true
+        pass_filenames: false
+
+      - id: golangci-lint
+        name: golangci-lint
+        entry: golangci-lint run --build-tags "server,client"
+        types: [go]
+        language: golang
+        require_serial: true
+        pass_filenames: false
