@@ -4,7 +4,7 @@ go 1.21.1
 
 require (
 	github.com/caarlos0/env/v9 v9.0.0
-	github.com/docker/docker v24.0.6+incompatible
+	github.com/docker/docker v24.0.7+incompatible
 	github.com/go-playground/validator/v10 v10.15.5
 	github.com/rs/zerolog v1.30.0
 	go.uber.org/multierr v1.11.0
